@@ -30,9 +30,9 @@ class MainActivity : ComponentActivity() {
         setContent {
             GestionnaireDeTacheTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    MyApp(
+                  Application(
                         title = "Android",
-                        message = "vivace",
+                        message = "Diallo",
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
@@ -42,7 +42,7 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun MyApp(title: String, message: String ,modifier: Modifier = Modifier) {
+fun Application(title: String, message: String ,modifier: Modifier = Modifier) {
     val image = painterResource(R.drawable.ic_task_completed)
     Column(
         verticalArrangement = Arrangement.Center,
@@ -70,8 +70,8 @@ fun MyApp(title: String, message: String ,modifier: Modifier = Modifier) {
 
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
-fun MyAppPreview() {
+fun ApplicationPreview() {
     GestionnaireDeTacheTheme {
-        MyApp(stringResource(R.string.title), stringResource(R.string.message))
+        Application(stringResource(R.string.title), stringResource(R.string.message))
     }
 }
